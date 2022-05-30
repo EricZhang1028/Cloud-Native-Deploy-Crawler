@@ -1,5 +1,6 @@
 import requests
 import urllib
+import time
 import pandas as pd
 from requests_html import HTML
 from requests_html import HTMLSession
@@ -130,3 +131,7 @@ if __name__ == "__main__":
     print(end_result)
     crawler.jsonarray_toexcel(end_result)
     print('Excel is OK')
+
+    while True:
+        print("This is time:", time.time())
+        time.sleep(1)
